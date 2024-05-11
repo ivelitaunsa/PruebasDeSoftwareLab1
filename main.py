@@ -9,6 +9,10 @@ def clasificar_triangulo(lado1, lado2, lado3):
     Un string que indica si el triángulo es escaleno,
     isósceles, equilátero o inválido.
     """
+    #Se verifica que los valores ingresados no sea o sean 0 
+    if(lado1 == 0 or lado2 == 0 or lado3 ==0):
+        return "El triángulo no puede tener un lado con valor 0"
+
     # Verificar si el triángulo es válido
     if lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:
         return "Triángulo inválido"
