@@ -47,7 +47,7 @@ try:
     lado3 = int(lado3_input)
     
 except ValueError: # Excepcion contra caracterires diferentes a números (Caso de prueba 6) (Caso de prueba 7)
-    print("Los lados del triángulo deben ser números positivos")    
+    print("Solo numeros, deben ser positivos y solo debe colocar 1")
     
 except KeyboardInterrupt: # Excepcion por interrupcion del programa (Caso de prueba 8)
     print("\n\nInterrumpido por el usuario.")
