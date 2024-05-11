@@ -30,15 +30,31 @@ def clasificar_triangulo(lado1, lado2, lado3):
 # Solicitar al usuario la longitud de los lados
 try: 
     # Se acepta un número lo suficientementegrande
-    lado1 = float(input("Ingrese la longitud del primer lado: "))
-    lado2 = float(input("Ingrese la longitud del segundo lado: "))
-    lado3 = float(input("Ingrese la longitud del tercer lado: "))
+    # Se verifica si se introduce varios numero por lado (Caso de prueba 9)
+    lado1_input = input("Ingrese la longitud del primer lado: ")
+    if len(lado1_input.split()) > 1:
+        raise ValueError("El lado no puede contener más de un número.")
+    lado1 = int(lado1_input)
+
+    lado2_input = input("Ingrese la longitud del segundo lado: ")
+    if len(lado2_input.split()) > 1:
+        raise ValueError("El lado no puede contener más de un número.")
+    lado2 = int(lado2_input)
+
+    lado3_input = input("Ingrese la longitud del tercer lado: ")
+    if len(lado3_input.split()) > 1:
+        raise ValueError("El lado no puede contener más de un número.")
+    lado3 = int(lado3_input)
+    
 except ValueError: # Excepcion contra caracterires diferentes a números (Caso de prueba 6) (Caso de prueba 7)
     print("Los lados del triángulo deben ser números positivos")    
     
 except KeyboardInterrupt: # Excepcion por interrupcion del programa (Caso de prueba 8)
     print("\n\nInterrumpido por el usuario.")
     exit()
+    
+
+    
 else:
     # Clasificar el triángulo y mostrar el resultado
     clasificacion = clasificar_triangulo(lado1, lado2, lado3)
