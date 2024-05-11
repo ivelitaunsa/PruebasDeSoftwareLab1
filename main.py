@@ -28,10 +28,13 @@ def clasificar_triangulo(lado1, lado2, lado3):
         return "Triángulo escaleno"
 
 # Solicitar al usuario la longitud de los lados
-lado1 = float(input("Ingrese la longitud del primer lado: "))
-lado2 = float(input("Ingrese la longitud del segundo lado: "))
-lado3 = float(input("Ingrese la longitud del tercer lado: "))
-
-# Clasificar el triángulo y mostrar el resultado
-clasificacion = clasificar_triangulo(lado1, lado2, lado3)
-print(f"El triángulo es: {clasificacion}")
+try:
+    lado1 = float(input("Ingrese la longitud del primer lado: "))
+    lado2 = float(input("Ingrese la longitud del segundo lado: "))
+    lado3 = float(input("Ingrese la longitud del tercer lado: "))
+except ValueError:
+    print("Los lados del triángulo deben ser números positivos")
+else:
+    # Clasificar el triángulo y mostrar el resultado
+    clasificacion = clasificar_triangulo(lado1, lado2, lado3)
+    print(f"El triángulo es: {clasificacion}")
