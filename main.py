@@ -34,7 +34,11 @@ try:
     lado2 = float(input("Ingrese la longitud del segundo lado: "))
     lado3 = float(input("Ingrese la longitud del tercer lado: "))
 except ValueError: # Excepcion contra caracterires diferentes a números (Caso de prueba 6) (Caso de prueba 7)
-    print("Los lados del triángulo deben ser números positivos")
+    print("Los lados del triángulo deben ser números positivos")    
+    
+except KeyboardInterrupt: # Excepcion por interrupcion del programa (Caso de prueba 8)
+    print("\n\nInterrumpido por el usuario.")
+    exit()
 else:
     # Clasificar el triángulo y mostrar el resultado
     clasificacion = clasificar_triangulo(lado1, lado2, lado3)
