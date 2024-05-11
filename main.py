@@ -16,7 +16,7 @@ def clasificar_triangulo(lado1, lado2, lado3):
             return "El triángulo no puede tener un lado con valor 0"
         return "El triángulo no puede tener un lado negativo"
 
-    # Verificar si el triángulo es válido
+    # Verificar si el triángulo es válido, (Caso de prueba 5)
     if lado1 + lado2 <= lado3 or lado1 + lado3 <= lado2 or lado2 + lado3 <= lado1:
         return "Triángulo inválido"
     # Clasificar el triángulo
